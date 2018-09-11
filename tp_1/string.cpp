@@ -68,6 +68,16 @@ class String2{
             }
             return i;
         }
+
+        const char* strcpy(){
+            int len = chlongueur(tab);
+            char tab2[len+1];
+            for(int i = 0 ; i < len ; i++){
+                tab2[i] = tab[i];
+            }
+            tab2[len]='\0';
+            return tab2;
+        }
         String2(const String2&){}
         ~String2(){}
 
@@ -77,7 +87,7 @@ class String2{
 int main(){
    // String2 essai1;
     String2 essai2("yolo");
-    cout<<essai2.chlongueur("yolo");
+    //cout<<essai2.chlongueur();
     /*
     string a;
     cout<<"mettre un mot"<<endl;
