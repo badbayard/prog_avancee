@@ -28,7 +28,7 @@ class String{
              i=0;
             while (mot[i]!='\0')
             {
-                i=i+1;
+                i++;
             }
             return i;
         }
@@ -47,8 +47,38 @@ class String{
         
 };
 
+class String2{
+    public:
+        char * tab;
+        String2();
+        String2(const char* tab2=""): tab(tab){
+            int len = chlongueur(tab2);
+            tab = new char[len];
+            for(int i = 0 ; i < len ;i++){
+                tab[i]=tab2[i];
+            }
+        }
+        String2(const char c){}
+        int chlongueur (const char* tab1){
+            int i;
+             i=0;
+            while (tab1[i]!='\0')
+            {
+                i++;
+            }
+            return i;
+        }
+        String2(const String2&){}
+        ~String2(){}
+
+};
+
 
 int main(){
+   // String2 essai1;
+    String2 essai2("yolo");
+    cout<<essai2.chlongueur("yolo");
+    /*
     string a;
     cout<<"mettre un mot"<<endl;
     cin >> a;
@@ -60,5 +90,6 @@ int main(){
     cout <<"apres operation"<<endl;
     essai1.getString();
     cout <<essai1.compare("tarte")<<endl;
+    */
     return 0;
 }
