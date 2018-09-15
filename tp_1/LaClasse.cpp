@@ -45,37 +45,9 @@ std::ostream & operator << (std::ostream & os, const LaClasse & lc)
 // Testez et analysez la s�quence d'appels aux fonctions membres 
 // de LaClasse dans le programme suivant :
 
-class LaClasseSpecialisee : public LaClasse{
-  public:
-    LaClasseSpecialisee() : LaClasse(5) {
-      std::cout<<"coucou j'existe"<<std::endl;
-    }
-
-    LaClasseSpecialisee(int a) : LaClasse(a){
-      std::cout<<"coucou j'existe avec une variable"<<std::endl;
-    }
-    ~LaClasseSpecialisee(){
-    std::cout<<"bye !!"<<std::endl;
-    }
-};
-
 
 int main()
 {
-  LaClasseSpecialisee yolo;
-  LaClasse c1;
-
-  LaClasse* ab = new LaClasseSpecialisee;
-  LaClasseSpecialisee* ad = static_cast<LaClasseSpecialisee*>(ab);
-  std::cout<<ad<<std::endl;
-  std::cout<<ab<<std::endl;
-
-//  c1=yolo; // upcase
-/* yolo = c1 //downcase */
-  
-  //yolo =&c1
-  //std::cout <<yolo;
-  /*
   LaClasse c1;
   LaClasse c2=LaClasse();
   LaClasse cc1(c1);
@@ -102,7 +74,6 @@ int main()
   LaClasse *pc=new LaClasse(tab[0]);
   delete pc;
   std::cout << "Avant de sortir ... \n";
-  */
   return 0; 
 }
  
